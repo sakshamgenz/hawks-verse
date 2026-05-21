@@ -1,0 +1,147 @@
+.section-desc {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-top: 0.75rem;
+}
+
+.match-card {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+}
+
+.mc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mc-mode {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.mc-title {
+  font-family: 'Orbitron', monospace;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--text-primary);
+  text-transform: uppercase;
+}
+
+.mc-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mc-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.meta-icon { font-size: 0.75rem; }
+
+.mc-slots {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.slots-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slots-text {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.slots-count {
+  font-family: 'Orbitron', monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.slots-sep { color: var(--text-muted); }
+
+.slots-bar {
+  height: 4px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.slots-fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.5s ease;
+}
+
+.mc-pricing {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.05);
+  padding: 12px 16px;
+  clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+}
+
+.mc-price-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+}
+
+.price-label {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+}
+
+.price-val {
+  font-family: 'Orbitron', monospace;
+  font-size: 0.8rem;
+}
+
+.prize-big {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.mc-price-arrow {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+}
+
+.mc-btn {
+  width: 100%;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.disabled-btn {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

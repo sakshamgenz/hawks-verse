@@ -1,0 +1,193 @@
+.tourney-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tourney-card {
+  padding: 1.75rem;
+  position: relative;
+  clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+}
+
+.tourney-highlight {
+  border-color: rgba(255, 160, 0, 0.4);
+  background: linear-gradient(135deg, rgba(255,120,0,0.06) 0%, var(--bg-card) 40%);
+}
+
+.tourney-highlight::before {
+  opacity: 1 !important;
+}
+
+.tourney-featured-label {
+  position: absolute;
+  top: -1px;
+  right: 2rem;
+  background: linear-gradient(135deg, #ffa000, #ff6d00);
+  color: #000;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 4px 14px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 8px 100%);
+}
+
+.tourney-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.tourney-left { flex: 1; min-width: 260px; }
+
+.tourney-tier {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.tourney-name {
+  font-family: 'Orbitron', monospace;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.tourney-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+}
+
+.t-meta {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.tourney-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.tourney-pool {
+  text-align: right;
+}
+
+.pool-label {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 3px;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+.pool-val {
+  font-size: 1.8rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.tourney-entry-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.t-entry-label {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.tourney-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.2fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.block-title {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.dist-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.dist-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.dist-pos { font-size: 0.9rem; }
+
+.rules-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.rule-item {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.rule-dot { color: var(--amber); flex-shrink: 0; }
+
+.tourney-cta-block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tourney-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+@media (max-width: 900px) {
+  .tourney-body { grid-template-columns: 1fr 1fr; }
+  .tourney-cta-block { grid-column: 1 / -1; }
+}
+
+@media (max-width: 600px) {
+  .tourney-body { grid-template-columns: 1fr; }
+  .tourney-header { flex-direction: column; }
+  .tourney-right { align-items: flex-start; }
+  .pool-val { font-size: 1.4rem; }
+}
